@@ -60,7 +60,7 @@ exports.init = function(io_var){
     io.on('connection', function (socket) {
         socket.emit("speak", {});
         socket.on('join', function (data) {
-            if (checkDoubles(data.name)){ //check if name has already been picked
+            if (true){ //check if name has already been picked
                 joinGame(data.name, socket);
             }
         });
