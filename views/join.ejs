@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Finding Players</title>
+        <link rel="stylesheet" href="stylesheets/spin.css">
+        <link rel="stylesheet" href="stylesheets/game.css">
+    </head>
+    
+    <body>
+        <div id="loading">
+            <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+               <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+            </svg>
+            <h2 id="message">Finding Players...</h2>
+            <h2 id="test">123456789</h2>
+        </div>
+        
+        <div id="game">
+            <div id="names">
+                <h1 id="myName"></h1>
+                <h1 id="opName"></h1>
+            </div>
+            
+            <div id="scores">
+                <h1 id="myScore">0</h1>
+                <h1 id="opScore">0</h1>
+            </div>
+            
+            <canvas id="game-canvas">
+                <h1>Well.</h1>
+                <h2>It looks like HTML5 canvas doesn't work in your browser.</h2>
+                <h4>Are you running an older version? Try upgrading it!</h4>
+            </canvas>
+        </div>
+        
+        <script src="/scripts/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        
+        <script src="/scripts/join-manager.js"></script>
+        <script src="/scripts/game.js"></script>
+    </body>
+</html>

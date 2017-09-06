@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Pong | Dorian Cauwe</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesheets/start-main.css">
+    </head>
+    <body>
+        <div id="login-window">
+            <div id="welcome-wrapper">
+                <h2>Welcome</h2>
+            </div>
+            
+            <div id="message-wrapper">
+                <p>Welcome to Pong Interactive!</p>
+                <p>by: Dorian Cauwe</p>
+            </div>
+            
+            <div class="message-instructions">
+                <h4>How to play</h4>
+                <p>You will be randomly placed in a Pong game against a random player. If a player cannot be found, you will play against the computer. You will move your paddle using the up and down arrow keys and attempt to gain ten points before your opponent.</p>
+            </div>
+            
+            <form id="join-game-wrapper" action="/join" method="post">
+                <input type="text" name="name" placeholder="Pick a name" class="name-box" autocomplete="off"/>
+                <input type="submit" value="Join Game" class="next-button"/>
+            </form>
+        </div>
+    </body>
+</html>
