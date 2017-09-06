@@ -17,7 +17,7 @@ var users = require("./users").init(io);
 var games = []
 var waitingList = []
 
-server.listen(8080);
+server.listen(8000);
 
 app.set('view engine', 'ejs'); //set view engine for templates
 app.set('views', __dirname + '/views'); //set views directory
