@@ -15,6 +15,7 @@ var i = 0;
 
 var myScore = 0;
 var opScore = 0;
+var playing = true;
 
 function Game(gameID, side, opName, socket, slope){
     gameID = gameID;
@@ -142,6 +143,15 @@ function Game(gameID, side, opName, socket, slope){
         
         $("#myScore").html(myScore);
         $("#opScore").html(opScore);
+        
+        if (opScore == 3){
+            alert("end of game!");
+            playing = false;
+        }
+         else if (myScore == 3){
+             alert("end of game!")
+             playing = false;
+         }
     }
     
     this.update = function(that){
@@ -169,7 +179,9 @@ function Game(gameID, side, opName, socket, slope){
         that.drawball(that);
         that.updateBall(that);
         
-        setTimeout(function () { that.update (that); }, 20);
+        if (playing){
+            setTimeout(function () { that.update (that); }, 20);   
+        }
     }
     
     this.init = function(){
