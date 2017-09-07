@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:8000');
+var socket = io.connect('ws://localhost:8000');
             
 var name = document.cookie.split("=")[1];
 
