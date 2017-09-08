@@ -1,4 +1,4 @@
-var socket = io.connect('ws://localhost:8000');
+var socket = io.connect('127.0.0.1:8000');
             
 var name = document.cookie.split("=")[1];
 
@@ -10,7 +10,6 @@ socket.on("speak", function(data){
 });
 
 socket.on("ready", function(data){
-
     var game = new Game(data.gameID, data.side, data.opName, socket, data.ballSlope);
 });
 
