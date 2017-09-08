@@ -4,7 +4,7 @@ var app = express();
 var port = 8080
 
 var server = require('http').Server(app);
-var io = require('socket.io')(server);
+var io = require('socket.io').listen(server);
 
 var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
@@ -16,8 +16,6 @@ var users = require("./users").init(io);
 
 var games = []
 var waitingList = []
-
-server.listen(8000);
 
 app.set('view engine', 'ejs'); //set view engine for templates
 app.set('views', __dirname + '/views'); //set views directory

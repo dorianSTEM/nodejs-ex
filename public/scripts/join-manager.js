@@ -1,4 +1,4 @@
-var socket = io.connect('http://pong-stem.rhcloud.com:8000');
+var socket = io.connect('http://127.0.0.1:8000');
             
 var name = document.cookie.split("=")[1];
 
